@@ -38,6 +38,7 @@
       flex: 1;
       min-width: 300px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 40px 0;
@@ -51,11 +52,32 @@
       border: 4px solid #fff;
       filter: grayscale(100%);
       box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      margin-bottom: 30px;
+    }
+
+    .social {
+      display: flex;
+      gap: 25px;
+      font-size: 26px;
+      margin-top: 20px;
+    }
+
+    .social a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .social a:hover {
+      color: #1da1f2;
+      transform: scale(1.2);
     }
 
     .right {
       background-color: #fff;
-      flex: 1;
+      flex: 2;
       min-width: 300px;
       padding: 60px 40px;
       display: flex;
@@ -89,26 +111,6 @@
       line-height: 1.6;
       list-style-type: disc;
       padding-left: 20px;
-    }
-
-    .social {
-      margin-top: 40px;
-      display: flex;
-      gap: 25px;
-      font-size: 26px;
-    }
-
-    .social a {
-      text-decoration: none;
-      color: #000;
-      transition: color 0.3s ease, transform 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .social a:hover {
-      color: #0077b5;
-      transform: scale(1.2);
     }
 
     @media (max-width: 768px) {
@@ -146,7 +148,22 @@
   <div class="container">
     <div class="left">
       <img src="profile.jpg" alt="Profil Fotoğrafı" />
+      <div class="social">
+        <a href="https://www.youtube.com/@yazlmdunyas3403" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/nurimete/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:nuriozdas@outlook.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
     </div>
+
     <div class="right">
       <div>
         <h1>N. METE</h1>
@@ -172,21 +189,6 @@
           <li>5. Sistem, web, PC ve Android seviyesinde yazılım geliştirme</li>
           <li>6. Bluetooth, Wi-Fi ve internet protokolleri ile haberleşme altyapısı kurma</li>
         </ul>
-      </div>
-
-      <div class="social">
-        <a href="https://www.youtube.com/@yazlmdunyas3403" target="_blank" aria-label="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/nurimete/" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="mailto:nuriozdas@outlook.com" aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
       </div>
     </div>
   </div>
