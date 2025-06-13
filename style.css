@@ -1,70 +1,99 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  background-color: #000;
-  color: #fff;
-  font-family: 'Helvetica Neue', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  box-sizing: border-box;
 }
 
-.card {
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
   display: flex;
-  flex-direction: row;
-  max-width: 800px;
-  width: 90%;
-  background: transparent;
+  height: 100vh;
+  width: 100%;
+}
+
+.left {
+  background-color: #000;
+  flex: 1;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 40px;
-  padding: 20px;
 }
 
 .left img {
-  width: 180px;
-  height: 180px;
-  border-radius: 100px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
+  border-radius: 100px;
   border: 3px solid white;
 }
 
+.right {
+  background-color: #fff;
+  flex: 1;
+  color: #111;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .right h1 {
-  margin: 0;
-  font-size: 2.2rem;
-}
-
-.right p {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-.links {
-  margin-top: 20px;
-}
-
-.links a {
-  color: #fff;
-  text-decoration: none;
+  font-size: 2.8rem;
   font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+.description {
+  margin-top: 25px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.social {
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+.social a {
+  text-decoration: none;
   margin-right: 20px;
-  border-bottom: 1px solid #fff;
-  transition: color 0.3s, border-color 0.3s;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
-.links a:hover {
-  color: #00ffff;
-  border-color: #00ffff;
+.social a:hover {
+  border-bottom: 2px solid #000;
+  color: #0077b5;
 }
 
-@media (max-width: 600px) {
-  .card {
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
-    text-align: center;
+  }
+
+  .left, .right {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .right {
+    padding: 40px 30px;
   }
 
   .left img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 }
