@@ -4,7 +4,119 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>N. METE</title>
-  <link rel="stylesheet" href="style.css"/>
+  
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .left {
+      background-color: #000;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 100px;
+      border: 3px solid white;
+    }
+
+    .right {
+      background-color: #fff;
+      flex: 1;
+      color: #111;
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .right h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      margin-top: 15px;
+      line-height: 1.4;
+    }
+
+    .description {
+      margin-top: 25px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .social {
+      margin-top: auto;
+      padding-top: 40px;
+    }
+
+    .social a {
+      text-decoration: none;
+      margin-right: 20px;
+      color: #000;
+      font-size: 28px; /* ikon boyutu */
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .social a:hover {
+      color: #0077b5; /* hoş mavi ton */
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        flex: none;
+        width: 100%;
+        height: auto;
+      }
+
+      .right {
+        padding: 40px 30px;
+      }
+
+      .left img {
+        width: 140px;
+        height: 140px;
+      }
+
+      .social a {
+        font-size: 22px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -18,9 +130,15 @@
       <p class="subtitle">Software Engineer, Consultant, Youtuber · Business inquiries? Contact me on LinkedIn.</p>
       <p class="description">Engineering leader with experience in building hyper-productive teams and developing great talent.</p>
       <div class="social">
-        <a href="https://youtube.com/" target="_blank">YouTube</a>
-        <a href="https://instagram.com/" target="_blank">Instagram</a>
-        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+        <a href="https://youtube.com/" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
       </div>
     </div>
   </div>
